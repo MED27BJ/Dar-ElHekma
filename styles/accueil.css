@@ -321,7 +321,7 @@ main {
   opacity: 0.9;
   position: fixed;
 }
-.div {
+.eldiv {
   display: flex;
   width: 80%;
   flex-wrap: wrap;
@@ -339,19 +339,23 @@ main {
   margin-top: 100px;
   margin-left: 25%;
   display: flex;
-  /* justify-content: center; */
   width: 80%;
   flex-wrap: wrap;
 }
 .ol-themes {
   display: flex;
   flex-wrap: wrap;
+  color: red;
+  font-size: 25px;
+  margin-left: 25px;
+
 }
 .ol-livre {
   margin-right: 20px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
+  list-style: none;
 }
 .ol-livre li {
   margin-right: 20px;
@@ -360,6 +364,6 @@ main {
   height: max-content;
 }
 .ol-livre li h3{
-  color: #fff;
+  color: red;
   text-align: center;
 }
