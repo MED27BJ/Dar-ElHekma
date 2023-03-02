@@ -85,6 +85,7 @@ var biblio = [
 for(k=0;k<biblio.length;k++){
     ar1.push(biblio[k].theme);
 };
+
 // eliminer les occurrences du tableau ar1
 let tab2 = [...new Set(ar1)];
 console.log(tab2);
@@ -98,3 +99,5 @@ for(j=0;j<tab2.length;j++){
     op2.innerHTML=v;
     sel2.appendChild(op2);
 };
+document.body.appendChild(sel2);
+
