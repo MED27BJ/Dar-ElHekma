@@ -79,3 +79,22 @@ var biblio = [
       auteur: "Ahmed Chaouki",
     },
   ];
+  //AIDE A LA RECHERCHE PAR THEME ON PEUT LE FAIRE DANS UNE FONCTION ET PAR PROPRIETE
+  // 1 constituer une table qui contient les valeurs de la propriété theme
+  let ar1=[];
+for(k=0;k<biblio.length;k++){
+    ar1.push(biblio[k].theme);
+};
+// eliminer les occurrences du tableau ar1
+let tab2 = [...new Set(ar1)];
+console.log(tab2);
+// créer un element select et inserer les valeurs dans les options
+let sel2= document.createElement('select');
+sel2.id = 'list2';
+for(j=0;j<tab2.length;j++){
+    let op2=document.createElement('option');
+    let v=tab2[j];
+    op2.value=v;
+    op2.innerHTML=v;
+    sel2.appendChild(op2);
+};
