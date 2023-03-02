@@ -172,7 +172,9 @@ Nav a {
   color: var(--col1);
   font-family: var(--fond1);
 }
-
+.sous-menu-acceuil a:hover{
+  color: chartreuse;
+}
 .sous-menu-services {
   width: 190px;
   height: 200px;
@@ -197,7 +199,9 @@ Nav a {
   color: var(--col1);
   font-family: var(--fond1);
 }
-
+.sous-menu-services a:hover{
+  color: chartreuse;
+}
 .acc:hover + ul {
   display: block;
 }
@@ -218,6 +222,12 @@ Nav a {
   width: 250px;
   height: 500px;
 }
+.tog-menu-acceuil a:hover {
+  color: chartreuse;
+    }
+    .tog-menu-services a:hover {
+      color: chartreuse;
+        }
 /* Extra small devices */
 @media (max-width: 576px) {
   .logo {
@@ -229,9 +239,14 @@ Nav a {
   .tog-menu-acceuil {
     margin-left: -35%;
   }
+  .tog-menu-acceuil a:hover {
+color: chartreuse;
+  }
+
   .tog-menu-services {
     margin-left: -35%;
   }
+ 
 }
 /* Small devices (landscape phones, 576px and up)  */
 @media (min-width: 576px) and (max-width: 768px) {
@@ -295,7 +310,6 @@ Nav a {
 .welcome {
   font-size: 40px;
   margin-left: 35%;
-  text-shadow: 4px rgb(123, 139, 30);
   color: white;
   font-family: var(--fond1);
   margin-top: 80px;
@@ -315,7 +329,7 @@ main {
   border-top-style: none;
   display: flex;
   justify-content: center;
-  width: 18%;
+  width: 15%;
   height: 100vh;
   background-image: url(../images/10\ \(2\).jpg);
   opacity: 0.9;
@@ -333,7 +347,10 @@ main {
 }
 
 .themes img {
-  width: 150px;
+  
+  width: 200px;
+ border-top-right-radius: 25px ;
+ border-top-left-radius: 25px;
 }
 .themes {
   margin-top: 100px;
@@ -357,13 +374,34 @@ main {
   align-content: space-around;
   list-style: none;
 }
+.ol-auteur li{
+  margin: 30px 0px;
+}
 .ol-livre li {
-  margin-right: 20px;
+  margin-right: 30px;
+  margin-bottom: 30px;
   border-style: outset;
   border-color: gold;
   height: max-content;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 200px;
 }
-.ol-livre li h3{
+.ol-livre li a h4{
+  
   color: red;
   text-align: center;
+  
 }
+.ol-livre li a{
+  text-decoration: none;
+  
+  }
+  .ol-livre li a:hover{
+    box-shadow: 0px 5px 8px 5px gray;
+    opacity: 0.6;
+    border-radius: 25px;
+    }
+    
