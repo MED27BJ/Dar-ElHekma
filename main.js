@@ -90,14 +90,15 @@ for(k=0;k<biblio.length;k++){
 let tab2 = [...new Set(ar1)];
 console.log(tab2);
 // créer un element select et inserer les valeurs dans les options
-let sel2= document.createElement('select');
-sel2.id = 'list2';
+let parent_select=document.getElementById("i-select");
+console.log(parent_select)
+
 for(j=0;j<tab2.length;j++){
     let op2=document.createElement('option');
     let v=tab2[j];
     op2.value=v;
     op2.innerHTML=v;
-    sel2.appendChild(op2);
+    parent_select.appendChild(op2);
 };
-document.body.appendChild(sel2);
+
 
