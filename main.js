@@ -80,7 +80,7 @@ var biblio = [
     },
   ];
   //AIDE A LA RECHERCHE PAR THEME ON PEUT LE FAIRE DANS UNE FONCTION ET PAR PROPRIETE
-  // 1 constituer une table qui contient les valeurs de la propriété theme
+  // constituer une table qui contient les valeurs de la propriété theme
   let ar1=[];
 for(k=0;k<biblio.length;k++){
     ar1.push(biblio[k].theme);
@@ -100,5 +100,3 @@ for(j=0;j<tab2.length;j++){
     op2.innerHTML=v;
     parent_select.appendChild(op2);
 };
-
-
