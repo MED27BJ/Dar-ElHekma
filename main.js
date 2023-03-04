@@ -37,7 +37,7 @@ var biblio = [
     },
     {
       theme: "Enfants",
-      image: "./images/Enfants/Aboukharbouch.jfif",
+      image: "./images/Kamel Kilani/Aboukharbouch.jfif",
       titre: "Aboukharbouch",
       auteur: "Kamel Kilani",
     },
@@ -79,6 +79,46 @@ var biblio = [
       auteur: "Ahmed Chaouki",
     },
   ];
+//   console.log(biblio[0].theme);
+//   biblio.map((el)=>{
+//   const card = `<ol class="ol-theme">
+//   <ol class="ol-themes" type="I">
+//     <li>
+//       ${el.theme}
+//       <ol class="ol-livre">
+//           <li>
+//             <a href="#">
+//               <img src="${el.image}" />
+//               <h4 class="titre">${el.titre}</h4>
+//               <h4 class="auteur">${el.auteur}</h4>
+//             </a>
+//           </li>
+//       </ol>
+//   </li>
+// </ol>`
+// document.querySelector('.themes').innerHTML+= card ;
+// })
+  biblio.map((el)=>{
+     // blog sera implementer dans le map function
+  var olLivre = document.querySelector(".ol-livre")
+  console.log(olLivre)
+  const liCont = document.createElement("li")
+  const aCont = document.createElement("a")
+  liCont.appendChild(aCont)
+  const imageCont = document.createElement("img")
+  imageCont.src = el.image
+  const h4UnCont = document.createElement("h4")
+  h4UnCont.innerHTML=el.titre
+  const h4DeuxCont = document.createElement("h4")
+  h4DeuxCont.innerHTML=el.auteur
+  aCont.appendChild(imageCont)
+  aCont.appendChild(h4UnCont)
+  aCont.appendChild(h4DeuxCont)
+  olLivre.appendChild(liCont)
+  //end blog
+
+  }) 
+
   //AIDE A LA RECHERCHE PAR THEME ON PEUT LE FAIRE DANS UNE FONCTION ET PAR PROPRIETE
   // constituer une table qui contient les valeurs de la prop
   let ar1=[];
@@ -100,117 +140,3 @@ for(j=0;j<tab2.length;j++){
     op2.innerHTML=v;
     parent_select.appendChild(op2);
 };
-
-// var arr=[
-//   {titre:"elayem",
-//   theme:"literature",
-//   auteur:"taha houssein",
-// },
-// {titre:"elou3ed el hak",
-//   theme:"literature",
-//   auteur:"taha houssein",
-// },
-// {titre:"zaman elboes",
-//   theme:"literature",
-//   auteur:"taha houssein",
-// },
-// {titre:"trois",
-//   theme:"literature",
-//   auteur:"ali",
-// },
-// {titre:"quatre",
-//   theme:"literature",
-//   auteur:"ali",
-// },
-// {titre:"trois",
-//   theme:"literature",
-//   auteur:"saleh",
-// },
-// {titre:"quatre",
-//   theme:"literature",
-//   auteur:"saleh",
-// },
-// {titre:"trois",
-//   theme:"art",
-//   auteur:"ali",
-// },
-// {titre:"quatre",
-//   theme:"art",
-//   auteur:"ali",
-// },
-// {titre:"trois",
-//   theme:"kart",
-//   auteur:"ali",
-// },
-// {titre:"quatre",
-//   theme:"sart",
-//   auteur:"ali",
-// },
-// {titre:"cin",
-//   theme:"sart",
-//   auteur:"salem",
-// },
-// ];
-
-// console.log(arr);
-// arr.sort((a,b) => (a.auteur.localeCompare(b.auteur)&&a.theme.localeCompare(b.theme)));
-// console.log(arr);
-
-// let b=document.getElementById("moyen").selectedIndex;
-
-// console.log(b);
-// let sel1= document.createElement('select');
-// sel1.id = 'list';
-// console.log(arr[1].theme);
-// console.log(sel1);
-// console.log(arr.length);
-
-// for(j=0;j<arr.length;j++){
-//   let op=document.createElement('option');
-//   let v=arr[j].theme;
-//   op.innerHTML=v;
-//   sel1.appendChild(op);
-// };
-// document.body.appendChild(sel1);
-// var propriete1=Object.keys(arr[0])[0];
-// var propriete2=Object.keys(arr[0])[1];
-// var propriete3=Object.keys(arr[0])[2];
-// console.log(propriete3);
-
-// let ar2=[];
-// for(k=0;k<arr.length;k++){
-//   ar2.push(arr[k].theme);
-// };
-// let tab2 = [...new Set(ar2)];
-// console.log(tab2);
-// let ar3=[];
-// for(k=0;k<arr.length;k++){
-//   ar3.push(arr[k].auteur);
-// };
-// let tab3 = [...new Set(ar3)];
-// console.log(tab3);
-
-// let chemin=document.getElementById("trop");
-// olth=document.createElement('ol');
-// olth.id=propriete2;
-// olth.innerHTML=propriete2;
-// chemin.appendChild(olth);
-
-
-// for (i=0;i<tab2.length;i++){
-//   let x=tab2[i];
-// let li1=document.createElement('li');
-// li1.id=tab2[i];
-// li1.innerHTML=tab2[i];
-// olth.appendChild(li1);
-// let olaut=document.createElement('ol');
-// olaut.id=propriete3;
-// olaut.innerHTML=propriete3;
-// li1.appendChild(olaut);
-// let ol_auteur=document.getElementById("auteur");
-// };
-// let ola_auteur=document.getElementsByName("auteur");
-// console.log(ola_auteur);
-
-
-
